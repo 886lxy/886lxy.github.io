@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>次元空间</title>
+		<link rel="shortcut icon" href="http://127.0.0.1:8848/%E7%BD%91%E9%A1%B5/images/sy4.jpeg" />
+		<style type="text/css">
+			            *{
+			                margin: 0;
+			                padding: 0;
+			             }
+			            ul{
+							list-style: none;
+							margin: 0;
+							float: right;
+						}
+						ul li,.logo{
+							display: inline-block;
+							line-height: 50px;
+							/*float: right;*/
+							margin-right: 20px;
+						}
+						a{
+							line-height: 50px;
+							text-decoration: none;
+							line-height: inherit;
+							color: #fff;
+						}
+						
+						.logo{
+							font-size: 20px;
+							font-weight: 700;
+							letter-spacing: 1px;
+							padding-left: 10px;
+						}
+						 a{
+							color: #fff;
+							text-decoration: none;
+						}
+						@font-face {
+							font-family:jcjk;
+							src: url(C299-苏新诗古印宋简.ttf);
+						}
+						body {
+						font-family: jcjk;
+						border:50px;
+						border-radius:5px;
+						background: url(images/sy12.jpg);
+						background-attachment: fixed;
+						overflow: hidden;
+						background-repeat: no-repeat;
+						background-size: cover;
+						 background-position: center center;
+						width:100%;
+						height:100vh;
+						}
+						body{
+						    cursor: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/texto.cur),auto;
+						}
+						html {
+						  line-height: 1.15;
+						  -webkit-text-size-adjust: 100%;
+						}
+						*{margin: 0;padding:0;}
+						ul{list-style: none;}
+						.clearfix::after{
+						    content: '';
+						    display: block;
+						    clear: both;
+						}
+						header{
+						    width: 720px;
+						    height: 44px;
+						    margin: 0 auto 50px;
+							position: 100%;
+							background-size: 100% auto;
+							
+							margin-left: auto;
+							margin-right: auto;
+						}
+						header .searchEnginPic{
+						    float: left;
+						    width: 120px;
+						    height: 44px;
+						}
+						header .searchEnginPic li.active{
+						    display: inline-block;
+						}
+						
+						header .searchBar{
+						    float: right;
+						    width: 580px;
+						    height: 44px;
+						    border-radius: 24px;
+						    position: relative;
+						    background: #fff;
+						}
+						
+						header .searchBar .searchEnginLogo{
+						    position: absolute;
+						    left: 10px;
+						    width: 24px;
+						    height: 44px;
+						    cursor: pointer;
+						}
+						
+						header .searchBar .searchEnginLogo li.active{
+						    display: inline-block;
+						}
+						.searchBar .searchEnginLogo li img{
+						    width: 24px;
+						    height: 24px;
+						    padding: 10px 0;
+						}
+						.searchBar input{
+						    position: absolute;
+						    left: 46px;
+						    top: 10%;
+						    width: 505px;
+						    height: 80%;
+						    border: none;
+						    outline: none;
+						}
+						.searchBar .searchBtn{
+						    position: absolute;
+						    right: 6px;
+						    top: 7px;
+						    width: 30px;
+						    height: 30px;
+						    background: url(images/search-btn.png) center center no-repeat;
+						    cursor: pointer;
+						    border: none;
+						    outline: none;
+						}
+						.wrapper div{
+						    width: 850px;
+						    margin: 0 auto;
+						    text-align: center;
+						}
+						.wrapper .lcg_wrapper{
+						    display: inline-block;
+						    vertical-align: top;
+						    width: 65px;
+						    height: 55px;
+						    border-radius: 7px;
+						    margin: 6px;
+						    box-shadow: 0 4px 3px 0 #3C3C3D, 0 0 1px 0 #3C3C3D;
+						    text-align: center;
+						}
+						.wrapper lcg{
+						    position: relative;
+						    display: inline-block;
+						    width: 65px;
+						    height: 50px;
+						    background: linear-gradient(to bottom, #fff 0%,#fff 70%,#f3f3f3 100%);
+						    border-radius: 7px;
+						    box-shadow: 0 5px 0 0 #767d81;
+						    color: #767D81;
+						    font-family: Helvetical;
+						    vertical-align: top;
+						    line-height: 50px;
+						    text-transform: uppercase;
+						    font-weight: bold;
+						    transition: all .2s linear;
+						}
+						.wrapper .lcg_wrapper:hover {
+						    cursor: pointer;
+						    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+						    transform: translate3d(0, 0, 0);
+						    backface-visibility: hidden;
+						    perspective: 1000px;
+						}
+						.wrapper lcg > button{
+						    display: none;
+						    position: absolute;
+						    right: 2px;
+						    bottom: 2px;
+						    font-size: 12px;
+						    width: 16px;
+						    height: 16px;
+						    border-radius: 5px;
+						    border: none;
+						    outline: none;
+						    color: #333;
+						    cursor: pointer;
+						}
+						.wrapper lcg:hover > button{
+						    display: inline-block;
+						}
+						.wrapper lcg > button:hover{
+						    background: #806605;
+						    color: #fff;
+						}
+						.key img{
+						    width: 16px;
+						    height: 16px;
+						    position: absolute;
+						    left: 4px;
+						    bottom: 2px;
+						}
+						@keyframes shake {
+						    10%, 90% {
+						        transform: translate3d(-1px, 0, 0);
+						    }
+						    20%, 80% {
+						        transform: translate3d(2px, 0, 0);
+						    }
+						    30%, 50%, 70% {
+						        transform: translate3d(-4px, 0, 0);
+						    }
+						    40%, 60% {
+						        transform: translate3d(4px, 0, 0);
+						    }
+						}
+						.66{
+							width: 100%;
+							height: 100%;
+						}
+						h2{
+							text-align: center;
+							line-height: 100px;
+							width: 100%;
+						}
+						dt img{
+							
+							width: 130px;
+							height: 130px;
+							border-radius: 50%;
+							border: 5px solid #FFFFFF;
+							box-shadow: 5px 5px 15px #000000;
+						}
+						b{
+							font-size: 17px;
+							margin: 10px;
+							text-align: left;
+							line-height: 50px;
+						}
+					</style>
+				</head>
+				<body>
+					<nav>
+						<div class="logo"><a href="shouye.html">首页</a></div>
+						<ul>
+							<li><a href="denglu.html" class="active">登录</a></li>
+							<li><a href="xinxi.html">信息</a></li>
+							<li><a href="jieshao.html">介绍</a></li>
+						</ul>
+					</nav>
+						<header>
+						        <ul id="searchEnginPic" class="searchEnginPic">
+						            <li class="active">
+						                <a href="https://www.baidu.com/" target="_blank"><img src="images/baidu.gif" alt="百度一下"></a>
+						            </li>
+						        </ul>
+						        <form action="https://www.baidu.com/baidu" target="_blank" id="searchBar" class="searchBar">
+						            <ul id="searchEnginLogo" class="searchEnginLogo">
+						                <li class="active">
+						                    <img src="images/baidu.svg" alt="baidu">
+						                </li>
+						            </ul>
+						            <input type="text" name=word id="inputBar">
+						            <button id="searchBtn" class="searchBtn"></button>
+						        </form>
+						    </header>
+				<main>
+					<div id="main" class="wrapper">
+						<div><div class="lcg_wrapper"><a href="qq.jpg" target="_blank"><lcg class="key"><span class="text">q</span><img src="https://im.qq.com/favicon.ico"><button id="q">e</button></lcg></a></div><div class="lcg_wrapper">
+						<a href="wx.jpg" target="_blank"><lcg class="key"><span class="text">w</span><img src="https://src.onlinedown.net/d/file/p/2019-08-06/2dc4d1b597725835d85259829db3fcff.jpg"><button id="w">e</button></lcg></a></div><div class="lcg_wrapper">
+						<a href="https://www.ele.me/" target="_blank"><lcg class="key"><span class="text">e</span><img src="https://www.ele.me/favicon.ico"><button id="e">e</button></lcg></a></div><div class="lcg_wrapper">
+						<a href="http://www.people.com.cn/" target="_blank"><lcg class="key"><span class="text">r</span><img src="http://www.people.com.cn/favicon.ico"><button id="r">e</button></lcg></a></div><div class="lcg_wrapper">
+						<a href="https://v.qq.com/" target="_blank"><lcg class="key"><span class="text">t</span><img src="https://v.qq.com/favicon.ico"><button id="t">e</button></lcg></a></div><div class="lcg_wrapper">
+						<a href="https://www.youku.com/" target="_blank"><lcg class="key"><span class="text">y</span><img src="https://www.youku.com/favicon.ico"><button id="y">e</button></lcg></a></div><div class="lcg_wrapper">
+						<a href="https://www.uc.cn/" target="_blank"><lcg class="key"><span class="text">u</span><img src="https://www.uc.cn/favicon.ico"><button id="u">e</button></lcg></a></div><div class="lcg_wrapper">
+						<a href="https://www.apple.com.cn/" target="_blank"><lcg class="key"><span class="text">i</span><img src="https://www.apple.com.cn/favicon.ico"><button id="i">e</button></lcg></a></div><div class="lcg_wrapper">
+						<a href="https://www.oppo.com/" target="_blank"><lcg class="key"><span class="text">o</span><img src="https://www.oppo.com/favicon.ico"><button id="o">e</button></lcg></a></div><div class="lcg_wrapper">
+						<a href="http://baidu2.ppxias.com/" target="_blank"><lcg class="key"><span class="text">p</span><img src="http://baidu2.ppxias.com/favicon.ico"><button id="p">e</button></lcg></a></div></div><div><div class="lcg_wrapper">
+						<a href="https://www.iqiyi.com/" target="_blank"><lcg class="key"><span class="text">a</span><img src="https://www.iqiyi.com/favicon.ico"><button id="a">e</button></lcg></a></div><div class="lcg_wrapper">
+						<a href="https://codol.qq.com/" target="_blank"><lcg class="key"><span class="text">s</span><img src="https://codol.qq.com/favicon.ico"><button id="s">e</button></lcg></a></div><div class="lcg_wrapper">
+						<a href="https://www.douyin.com/" target="_blank"><lcg class="key"><span class="text">d</span><img src="https://www.douyin.com/favicon.ico"><button id="d">e</button></lcg></a></div><div class="lcg_wrapper">
+						<a href="https://www.fliggy.com/" target="_blank"><lcg class="key"><span class="text">f</span><img src="https://www.fliggy.com/favicon.ico"><button id="f">e</button></lcg></a></div><div class="lcg_wrapper">
+						<a href="https://www.amap.com/" target="_blank"><lcg class="key"><span class="text">g</span><img src="https://www.amap.com/favicon.ico"><button id="g">e</button></lcg></a></div><div class="lcg_wrapper">
+						<a href="https://gp.qq.com/" target="_blank"><lcg class="key"><span class="text">h</span><img src="https://gp.qq.com/favicon.ico"><button id="h">e</button></lcg></a></div><div class="lcg_wrapper">
+						<a href="https://www.jiakaobaodian.com/" target="_blank"><lcg class="key"><span class="text">j</span><img src="https://www.jiakaobaodian.com/favicon.ico"><button id="j">e</button></lcg></a></div><div class="lcg_wrapper">
+						<a href="https://www.kugou.com/" target="_blank"><lcg class="key"><span class="text">k</span><img src="https://www.kugou.com/favicon.ico"><button id="k">e</button></lcg></a></div><div class="lcg_wrapper">
+						<a href="https://langrensha.163.com/" target="_blank"><lcg class="key"><span class="text">l</span><img src="https://langrensha.163.com/favicon.ico"><button id="l">e</button></lcg></a></div></div><div><div class="lcg_wrapper">
+						<a href="https://www.zhihu.com/" target="_blank"><lcg class="key"><span class="text">z</span><img src="http://zhihu.com/favicon.ico"><button id="z">e</button></lcg></a></div><div class="lcg_wrapper">
+						<a href="https://www.xiaohongshu.com/" target="_blank"><lcg class="key"><span class="text">x</span><img src="https://www.xiaohongshu.com/favicon.ico"><button id="x">e</button></lcg></a></div><div class="lcg_wrapper">
+						<a href="https://cf.qq.com/" target="_blank"><lcg class="key"><span class="text">c</span><img src="https://cf.qq.com/favicon.ico"><button id="c">e</button></lcg></a></div><div class="lcg_wrapper">
+						<a href="http://www.vivo.com.cn/" target="_blank"><lcg class="key"><span class="text">v</span><img src="http://www.vivo.com.cn/favicon.ico"><button id="v">e</button></lcg></a></div><div class="lcg_wrapper">
+						<a href="https://www.bilibili.com/" target="_blank"><lcg class="key"><span class="text">b</span><img src="http://bilibili.com/favicon.ico"><button id="b">e</button></lcg></a></div><div class="lcg_wrapper">
+						<a href="https://www.nike.com/" target="_blank"><lcg class="key"><span class="text">n</span><img src="https://www.nike.com/favicon.ico"><button id="n">e</button></lcg></a></div><div class="lcg_wrapper">
+						<a href="https://mole.leiting.com/" target="_blank"><lcg class="key"><span class="text">m</span><img src="https://mole.leiting.com/favicon.ico"><button id="m">e</button></lcg></a></div></div></div>
+						<div class="66" align="center">
+							<h2>个人信息</h2>
+							<hr width="60%" align="left">
+							<dt align="center">
+							<img src="images/tx.jpg"/></dt>
+							<hr width="60%" align="left">
+							<tr>
+							<td><b>姓名：李超</b></td>
+							<td><b>性别：男</b></td>
+							<td><b>民族：汉</b></td>
+							</tr><br />
+							<tr>
+							<td><b>出生日期：2003.10.23</b></td>
+							<td><b>电话：19862730274</b></td>
+							<td><b>邮箱：2384449574@qq.com</b></td>
+							</tr><br />
+							<tr>
+							<td><b>年级：2018级</td></b>
+							<td><b>班级：三班</td></b>
+							<td><b>学号：201802015107</td></b>
+							</tr><br />
+							<tr>
+							<td><b>专业：计算机</td></b>
+							<td><b>院校：济宁职业技术学院</td></b>
+							</tr>
+						</div>
+				</main>
+				</body>
+				</html>
